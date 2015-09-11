@@ -25,7 +25,6 @@
   "preferGlobal": true,
   "dependencies": {
     "github-url-to-object": "^1.5.2",
-    "got": "^4.2.0",
-    "is-online": "^5.0.0"
+    "got": "^4.2.0"
   }
 }
