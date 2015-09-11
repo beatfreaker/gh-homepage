@@ -4,13 +4,15 @@
 base_github_url=$(git config --get remote.origin.url)
 base_github_url=${base_github_url%\.git} # remove .git from end of string
 
+# Get homepag URL of github repo (this command wll call index.js)
 homepage_url=$(gh-homepageurl "$base_github_url")
-if $homepage_url == "no homepage url defined"; then
-  echo "hello"
+if [[ "$homepage_url" == "no homepage url found" || "$homepage_url" == "error" ]]; then
+  echo $homepage_url
+  exit 1
 fi
 echo $homepage_url
 for opener in xdg-open open cygstart "start"; {
-  if command -v $opener; then 
+  if command -v $opener; then
     open=$opener;
     break;
   fi
