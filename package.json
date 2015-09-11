@@ -1,0 +1,31 @@
+{
+  "name": "gh-homepage",
+  "version": "1.0.0",
+  "description": "Open the homepage URL of a github repo that matches you shell's current branch and working directory",
+  "keywords": [
+    "github",
+    "repo",
+    "homepage",
+    "url",
+    "utility",
+    "cli"
+  ],
+  "repository": "https://github.com/beatfreaker/gh-homepage",
+  "author": {
+    "name": "Chintan Radia",
+    "email": "radiachints1512@gmail.com",
+    "url": "http://beatfreaker.github.io/)"
+  },
+  "license": "MIT",
+  "bin": {
+    "gh-homepage": "./bin/gh-homepage",
+    "gh-hp": "./bin/gh-homepage",
+    "gh-homepageurl": "index.js"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "github-url-to-object": "^1.5.2",
+    "got": "^4.2.0",
+    "is-online": "^5.0.0"
+  }
+}
